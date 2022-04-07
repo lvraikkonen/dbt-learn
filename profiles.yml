@@ -1,13 +1,15 @@
-# example profiles.yml file
-jaffle_shop:
+config:
+  send_anonymous_usage_stats: False
+
+dbt_tutorial:
   target: dev
   outputs:
     dev:
       type: postgres
-      host: 127.0.0.1
-      user: postgres
-      password: 7ujm8ik,
+      threads: 1
+      host: localhost
       port: 5432
-      dbname: jaffle_shop
-      schema: dbt_alice
-      threads: 4
+      user: dbt
+      pass: password1234
+      dbname: dbt
+      schema: warehouse
